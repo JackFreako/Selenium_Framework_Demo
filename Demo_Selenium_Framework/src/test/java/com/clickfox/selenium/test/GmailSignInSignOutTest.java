@@ -6,6 +6,7 @@ package com.clickfox.selenium.test;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,7 @@ import com.clickfox.selenium.test.util.AppConstants;
  * @author yared
  *
  */
+@Ignore
 public class GmailSignInSignOutTest {
 
 	private WebDriver driver;

@@ -8,6 +8,7 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -17,7 +18,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -28,6 +28,7 @@ import com.clickfox.selenium.test.util.AppConstants;
  * @author yared
  *
  */
+@Ignore
 public class GmailSendAndReceiveEmailTest {
 
 	private WebDriver driver;
@@ -61,8 +62,7 @@ public class GmailSendAndReceiveEmailTest {
 	 */
 	@Test
 	public void test_sendAndReceiveEmail(){
-		
-		
+				
 		//Navigate to the Application under test
 		driver.get(AppConstants.AUT_URL);
 
@@ -94,9 +94,7 @@ public class GmailSendAndReceiveEmailTest {
 		//Click the signIn Button
 		WebElement signInButton = driver.findElement(By.id("signIn"));
 		signInButton.click();
-		
-		
-		
+				
 		
 		//TODO : Send, receive and verify a sample email
 		
