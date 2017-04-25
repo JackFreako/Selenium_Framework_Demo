@@ -12,6 +12,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.clickfox.selenium.pageobjects.EmailHomePage;
 import com.clickfox.selenium.pageobjects.EmailViewPage;
 import com.clickfox.selenium.pageobjects.SignInPage;
+import com.clickfox.selenium.priority.Critical;
+import com.clickfox.selenium.priority.Major;
 import com.clickfox.selenium.util.WebUtil;
 
 
@@ -33,10 +35,12 @@ public class GmailSignInTest {
         } else {
             driver = new FirefoxDriver();
         }
+        
+        driver.manage().window().maximize();
     }
 
     //@Ignore //Already working fine...
-    //@Category({Critical.class})
+    @Category({Critical.class})
     @Test
     public void gmailLoginShouldBeSuccessful() {
         //1. Go to Gmail website
@@ -61,7 +65,7 @@ public class GmailSignInTest {
     }
 
     //@Ignore
-    //@Category({Major.class})
+    @Category({Major.class})
     @Test
     public void gmailSendAndReceiveEmailTest() {
         // 1. Click sign in
