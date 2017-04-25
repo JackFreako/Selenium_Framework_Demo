@@ -29,7 +29,7 @@ public class GmailSignInSignOutTest {
 	@Before
 	public void setUp(){
 		
-		String browserName = "firefox"; //System.getenv("browser");
+		String browserName = "Chrome"; //System.getenv("browser");
         
         if (browserName != null && browserName.equalsIgnoreCase("Chrome")) {
         	System.setProperty("webdriver.chrome.driver", "/home/yared/Desktop/clickfox/selenium jars/chromedriver");
@@ -39,6 +39,8 @@ public class GmailSignInSignOutTest {
             driver = new FirefoxDriver();
         }
 		
+        driver.manage().window().maximize();
+
 	}
 	
 	/**
